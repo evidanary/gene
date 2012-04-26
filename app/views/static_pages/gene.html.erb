@@ -1,37 +1,18 @@
 <h1>Crossover Genetic Algorithm</h1>
 <div>
+
 <% 
-def gen_dna_child(dna_m,dna_f,crossover_indexes)
-  # add to crossover indexes
-  crossover_indexes = crossover_indexes << dna_m.length 
-  start = 0 # start index of dna
-  cur_parent = (Random.rand() * 2).ceil == 1 ? "m":"f"  # initial splice 
-  new_dna=''
-
-  # For each crossover compute segment
-  crossover_indexes.each do |cr|
-    if cur_parent == 'm'
-      dna = dna_m
-      cur_parent = 'f'
-    else
-      dna = dna_f
-      cur_parent = 'm'
-    end
-
-    new_dna += dna[start..cr-1] 
-
-    start=cr
-  end
-  new_dna
-end
-
 dna_m = "qpwoeirzzxcvlkjhasdfertyhkjlcnbv"
 dna_f = "qoiuykjhgnmbvafsdrtuykhjgnvbcbvj"
 crossover_indexes = [8, 12, 18]
-
-# puts gen_dna_child(dna_m,dna_f,crossover_indexes)
 %>
-<%= gen_dna_child(dna_m,dna_f,crossover_indexes) %>
+
+
+<p>Parent Male Gene: <%= dna_m %></p>
+<p>Parent Female Gene: <%= dna_f %></p>
+
+<%=
+gen_dna_child(dna_m,dna_f,crossover_indexes) %>
 </div>
 
 <p>test</p>

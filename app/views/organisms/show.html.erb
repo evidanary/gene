@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Species:</b>
+  <%= @organism.species %>
+</p>
+
+<p>
+  <b>Longevity:</b>
+  <%= @organism.longevity %>
+</p>
+
+<p>
+  <b>Repro coefficient:</b>
+  <%= @organism.repro_coefficient %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @organism.name %>
+</p>
+
+<p>
+  <b>Sex:</b>
+  <%= @organism.sex %>
+</p>
+
+<%= link_to 'Edit', edit_organism_path(@organism) %> |
+<%= link_to 'Back', organisms_path %>

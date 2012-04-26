@@ -1,6 +1,9 @@
 Gene::Application.routes.draw do
-  get "static_pages/gene"
+  resources :organisms
 
+  get "static_pages/gene"
+  root :to => 'static_pages#gene'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

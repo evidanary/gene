@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  species: MyString
+  longevity: 1
+  repro_coefficient: 1
+  name: MyString
+
+two:
+  species: MyString
+  longevity: 1
+  repro_coefficient: 1
+  name: MyString
