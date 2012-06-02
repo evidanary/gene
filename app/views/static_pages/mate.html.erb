@@ -1,8 +1,0 @@
-<h1>Mating organisms</h1>
-
-<%=select("organism", "organism_id", Organism.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'})%>
-<%=select("organism", "organism_id", Organism.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'})%>
-<%=button_tag(:type => 'button',:disable_with => "Please wait...") do
-  content_tag(:strong, 'Mate!')
-end 
-%>
