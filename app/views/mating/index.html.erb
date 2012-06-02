@@ -1,8 +1,8 @@
 <h1>Mating organisms</h1>
 
-<%=select("organism", "organism_id", Organism.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'})%>
-<%=select("organism", "organism_id", Organism.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'})%>
-<%=button_tag(:type => 'button',:disable_with => "Please wait...") do
-  content_tag(:strong, 'Mate!')
-end 
-%>
+<%= form_for @organism, :url => mate_path, :method => :post do |f| %>
+  <%=select("organism", "id", Organism.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'})%>
+  <%=select("organism", "id", Organism.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'})%>
+
+  <%= f.submit("Mate!") %>
+<% end %>
