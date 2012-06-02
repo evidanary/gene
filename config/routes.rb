@@ -1,9 +1,9 @@
 Gene::Application.routes.draw do
   resources :organisms
-
-  get "static_pages/gene"
-  get "static_pages/mate"
-  root :to => 'static_pages#gene'
+  resources :mating
+  resources :gene
+  
+  root :to => 'static_pages#home'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
