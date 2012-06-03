@@ -1,0 +1,14 @@
+<h1>Mating organisms</h1>
+<%= form_tag(reproduction_mate_path, :method => "post") do %>
+  <%=select("organism", "organism_id", Organism.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'})%>
+  <%=select("organism", "organism_id", Organism.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'})%>
+
+
+  <%= submit_tag("Mate!") %>
+<% end %>
+
+<%=button_tag(:type => 'button',:disable_with => "Please wait...") do
+  content_tag(:strong, 'Mate!')
+end 
+%>
+
